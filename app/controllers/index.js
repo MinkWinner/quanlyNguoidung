@@ -59,9 +59,7 @@ const updateUser = (id) => {
   getApi
     .getUserApi()
     .then(function (result) {
-      isValidation &=
-        checkVal.isEmpty(tk, "tbTaiKhoan") &&
-        checkVal.isExist(tk, "tbTaiKhoan", result.data);
+      isValidation &= checkVal.isEmpty(tk, "tbTaiKhoan");
 
       isValidation &=
         checkVal.isEmpty(name, "tbHoTen") &&
